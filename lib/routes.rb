@@ -1,7 +1,11 @@
-get '/about' do
-  haml "%p mpsontwitter.co.uk brought to you by lukeredpath.co.uk"
+get '/' do
+  erb :index
 end
 
-get '/' do
-  haml :index
+post '/' do
+  redirect '/yourmp'
+end
+
+get '/yourmp' do
+  erb :yourmp
 end

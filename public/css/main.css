@@ -11,6 +11,7 @@ body {
   color: #524E4E;
   background: #fff url(../images/twitter.png) no-repeat bottom right;
   border: 10px solid #D3D3D3;
+  min-height: 380px;
 }
 
 h1 {
@@ -21,7 +22,7 @@ h1 {
 }
 
 p {
-
+  font-size: 24px;
 }
 
 a {
@@ -57,4 +58,16 @@ fieldset {
 button {
   font-size: 20px;
   margin: 0; padding: 6px;
+}
+
+.mp .name {
+  font-weight: bold;
+}
+
+.mp .party {
+  font-weight: bold;
+}
+
+.mp .conservative {
+  color: #2D70C7;
 }
