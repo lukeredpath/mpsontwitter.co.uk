@@ -8,4 +8,12 @@ class MP
       send("#{key}=", value) if respond_to?(key)
     end
   end
+  
+  def check_twitter_status
+    self.twitter_username = TwitterStatusChecker.load.check(self)
+  end
+  
+  def url
+    "uk.org.publicwhip/member/#{member_id}"
+  end
 end

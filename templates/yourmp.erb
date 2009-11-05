@@ -9,9 +9,9 @@
 </div>
    
 <% if @mp.twitter_username %>
-  <p>His/her twitter name is <strong><%= @mp.twitter_username %></strong></p>
+  <p>His or her twitter name is <strong><%= @mp.twitter_username %></strong>.</p>
   
-  <p>View <a href="http://twitter.com/<%= @mp.twitter_username %>">his or her profile on Twitter</a> or <a href="http://twitter.com?status=@<%= @mp.twitter_username %>%20">send them a message</a> now</p>.
+  <p>View <a href="http://twitter.com/<%= @mp.twitter_username %>">his or her profile on Twitter</a> or <a href="http://twitter.com?status=@<%= @mp.twitter_username %>%20">send them a message</a> now.</p>
 <% else %>
   <p>Your MP is not currently using Twitter as far as we are aware. If you think they should be, why not <a href="http://writetothem.com">write to them directly</a> and let them know.</p>
 <% end %>
