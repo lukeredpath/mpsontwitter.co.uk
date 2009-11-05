@@ -1,5 +1,5 @@
 APPLICATION_ROOT = File.join(File.dirname(__FILE__))
-DATA_FILE_URI    = URI.parse('http://spreadsheets.google.com/pub?key=tR91dVfDVlRz1XGC5fVwkfw&single=true&gid=0&output=csv')
+DATA_FILE_URI    = URI.parse('http://mps.monstermischief.com/data/mps.csv')
 
 require 'net/http'
 
