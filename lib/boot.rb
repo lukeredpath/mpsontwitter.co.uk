@@ -1,7 +1,7 @@
 require 'sinatra'
 
 $APPLICATION_ROOT = File.join(File.dirname(__FILE__), *%w[..])
-$TWFY_API_KEY = File.read(File.join($APPLICATION_ROOT, 'private', 'apikey'))
+$TWFY_API_KEY = ENV['TWFY_API_KEY']
 
 set :public, File.join($APPLICATION_ROOT, 'public')
 set :views,  File.join($APPLICATION_ROOT, 'templates')
