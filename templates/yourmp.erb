@@ -1,19 +1,19 @@
-<% if true %>
+<% if @mp.twitter_username %>
   <h1>Your MP is on Twitter!</h1>
 <% else %>
    <h1>Your MP is not on Twitter!</h1>
 <% end %>
 
 <div class="mp">
-  <p>Your local MP is <span class="name">David Burrowes</span>, <span class="party">Conservative</span> MP for <span class="constituency">Southgate, Enfield</span>.</p>
+  <p>Your local MP is <span class="name"><%= @mp.full_name %></span>, <span class="party <%= @mp.party.downcase %>"><%= @mp.party %></span> MP for <span class="constituency"><%= @mp.constituency %></span>.</p>
 </div>
    
-<% if false %>
-  <p>His/her twitter name is <strong>joebloggs</strong></p>
+<% if @mp.twitter_username %>
+  <p>His/her twitter name is <strong><%= @mp.twitter_username %></strong></p>
   
-  <p>View <a href="#">his or her profile on Twitter</a> or <a href="http://twitter.com?status=@joebloggs%20">send them a message</a> now</p>.
+  <p>View <a href="http://twitter.com/<%= @mp.twitter_username %>">his or her profile on Twitter</a> or <a href="http://twitter.com?status=@<%= @mp.twitter_username %>%20">send them a message</a> now</p>.
 <% else %>
   <p>Your MP is not currently using Twitter as far as we are aware. If you think they should be, why not <a href="http://writetothem.com">write to them directly</a> and let them know.</p>
 <% end %>
 
-<p>Find out more about your local MP on <a href="p://www.theyworkforyou.com/mp/david_burrowes/enfield%2C_southgate">TheyWorkForThem.com</a>.</p>
+<p id="findoutmore">Find out more about your local MP on <a href="http://www.theyworkforyou.com/mp/?id=<%= @mp.member_id %>">TheyWorkForThem.com</a>.</p>

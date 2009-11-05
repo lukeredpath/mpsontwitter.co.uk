@@ -1,10 +1,17 @@
 <h1>Is your local MP on Twitter?</h1>
 
+<% if @lookup && @lookup.errors.any? %>
+  <h2>Oops! Something went wrong</h2>
+  <% if @lookup.errors.grep(/invalid postcode/i) %>
+    <p class="error">It looks like we couldn't match your postcode. Did you enter it correctly? Give it another try.</p>
+  <% end %>
+<% end %>
+
 <form method="post">
   <fieldset>
     <div class="field">
       <label>What is your postcode?</label>
-      <input class="large" type="text" />
+      <input class="large" type="text" name="postcode" />
     </div>
     <div class="field">
       <button>Check my postcode</button>

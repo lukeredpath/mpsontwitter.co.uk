@@ -11,7 +11,6 @@ body {
   color: #524E4E;
   background: #fff url(../images/twitter.png) no-repeat bottom right;
   border: 10px solid #D3D3D3;
-  min-height: 380px;
 }
 
 h1 {
@@ -62,6 +61,7 @@ button {
 
 .mp .name {
   font-weight: bold;
+  font-size: 140%;
 }
 
 .mp .party {
@@ -70,4 +70,16 @@ button {
 
 .mp .conservative {
   color: #2D70C7;
+}
+
+.mp .constituency {
+  font-size: 140%;
+}
+
+.error {
+  color: #2EC7B5;
+}
+
+#findoutmore {
+  margin-top: 40px;
 }
